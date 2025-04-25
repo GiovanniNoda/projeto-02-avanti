@@ -10,4 +10,4 @@ Project created for the application to the AVANTI internship program.
 
 Built with React, TypeScript, and Tailwind CSS, the project performs a search for GitHub users by their username. Through a GitHub API request, it retrieves some user data. Here, you can observe concepts such as public API requests, component creation for better performance, and responsive layouts adapted for any screen.
 
-<a href="https://projeto-02-avanti.vercel.app/" target="_blank">Click here to visit the website!</a
+<a href="https://projeto-02-avanti.vercel.app/" target="_blank">Click here to visit the website!</a>
