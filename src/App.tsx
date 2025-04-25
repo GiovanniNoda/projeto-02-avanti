@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa"
 import { Search } from "./components/Search"
 import { ErrorMessage } from "./components/Error-message"
 import { Profile } from "./components/Profile"
+import { Loading } from "./components/Loading"
 
 export function App() {
   return (
@@ -21,7 +22,7 @@ export function App() {
 
         <Search />
 
-        
+        <Loading />
       </div>
     </main>
   )
