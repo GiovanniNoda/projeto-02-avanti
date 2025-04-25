@@ -5,7 +5,7 @@ import { IoSearchOutline } from "react-icons/io5"
 import { UserProps } from "../utils/types"
 
 interface SearchProps {
-    onSearch: (data: UserProps) => void
+    onSearch: (data: UserProps | null) => void
 }
 
 export function Search({ onSearch }: SearchProps) {
@@ -15,9 +15,7 @@ export function Search({ onSearch }: SearchProps) {
         e.preventDefault() 
         const userData = await getApiUserGithub(username.replace(/\s+/g, ""))
     
-        if (userData) {
-            onSearch(userData);
-        } 
+        onSearch(userData)
 
         setUsername("")
     }
