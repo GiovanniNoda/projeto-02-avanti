@@ -21,11 +21,11 @@ export function Search({ onSearch }: SearchProps) {
     }
 
     return (
-        <form onSubmit={handleSearch} className="w-[50%] flex items-center relative">
-            <input type="text" placeholder="Digite um usuário do Github" className="w-[100%] py-4 px-5 bg-white rounded-md placeholder:text-gray-600" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <form onSubmit={handleSearch} className="w-[95%] flex items-center relative md:w-[50%]">
+            <input type="text" placeholder="Digite um usuário do Github" className="w-[100%] bg-white rounded-md py-2 px-3 placeholder:text-gray-600 placeholder:text-sm md:placeholder:text-[1rem] md:py-4 md:px-5" value={username} onChange={(e) => setUsername(e.target.value)} />
 
-            <button type="submit" className="absolute right-[0.5px] bg-blue-600 rounded-md p-3 cursor-pointer hover:bg-blue-700 transition-colors duration-200">
-                <IoSearchOutline size={31} color="#fff" />
+            <button type="submit" className="absolute right-[0.5px] bg-blue-600 rounded-md p-1.75 cursor-pointer hover:bg-blue-700 transition-colors duration-200 md:p-3">
+                <IoSearchOutline size={24} color="#fff" className="md:size-[31px]" />
             </button>
         </form>
     )
