@@ -3,9 +3,16 @@ import { FaGithub } from "react-icons/fa"
 import { Search } from "./components/Search"
 import { ErrorMessage } from "./components/Error-message"
 import { Profile } from "./components/Profile"
-import { Loading } from "./components/Loading"
+import { UserProps } from "./utils/types"
+import { useState } from "react"
 
 export function App() {
+  const [userData, setUserData] = useState<UserProps | null>(null)
+
+  const handleSearch = (data: UserProps) => {
+    setUserData(data)
+  }
+
   return (
     <main className="flex justify-center items-center min-h-screen w-full bg-gradient-to-br from-[#0A3990] to-[#1F1F1F]">
 
@@ -20,9 +27,9 @@ export function App() {
           </h1>
         </div>
 
-        <Search />
+        <Search onSearch={handleSearch} />
 
-        <Loading />
+        {userData ? <Profile userData={userData} /> : <ErrorMessage />}
       </div>
     </main>
   )
